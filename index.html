@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Nomula - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <script defer src="script.js"></script>
     <style>
         /* Global Styles */
         body {
@@ -22,19 +21,34 @@
             margin: auto;
             padding: 20px;
         }
+        /* Navbar */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
         /* Header */
         header {
             background: #007acc;
             color: white;
-            padding: 40px;
+            padding: 50px;
             font-size: 24px;
             font-weight: bold;
             text-transform: uppercase;
-        }
-        .toggle-container {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            margin-top: 50px;
         }
         /* Sections */
         section {
@@ -88,6 +102,21 @@
         .project-card a:hover {
             background: #ffaa00;
         }
+        /* Resume Button */
+        .resume-btn {
+            background: #ffcc00;
+            color: black;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            border: none;
+        }
+        .resume-btn:hover {
+            background: #ffaa00;
+        }
         /* Experience & Education */
         .experience, .education {
             text-align: left;
@@ -97,6 +126,20 @@
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
+        }
+        /* Contact */
+        .contact {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .contact img {
+            width: 30px;
+            transition: 0.3s;
+        }
+        .contact img:hover {
+            transform: scale(1.2);
         }
         /* Footer */
         footer {
@@ -110,6 +153,15 @@
 </head>
 <body>
 
+        <!-- Navbar -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
     <header>
         Rahul Nomula - Business Data Analyst & AI Engineer
     </header>
@@ -125,6 +177,9 @@
                 With expertise in <b>Power BI, SQL, Python, and AI technologies</b>, I create scalable solutions for real-world problems.  
                 My goal is to bridge the gap between business needs and data-driven strategies. 🚀  
             </p>
+            <a href="Rahul_Nomula_Resume.pdf" download>
+                <button class="resume-btn">📄 Download My Resume</button>
+            </a>
         </section>
 
         <!-- Featured Projects -->
@@ -146,6 +201,22 @@
                     <p>Gradio-based AI image editing application.</p>
                     <a href="https://github.com/Rahul-n12/ai-powered-image-processing-app">View Project</a>
                 </div>
+                <div class="project-card">
+                    <h3>📑 AI YouTube Blog Generator</h3>
+                    <p>Converts YouTube videos into SEO-friendly blog articles.</p>
+                    <a href="https://github.com/Rahul-n12/ai-youtube-blog-generator">View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>🔬 Deep Research Bot</h3>
+                    <p>Automates research by retrieving, summarizing, and analyzing papers.</p>
+                    <a href="https://github.com/Rahul-n12/deep-research-bot">View Project</a>
+                </div>        
+                <div class="project-card">
+                    <h3>💊 Disease Detection with ChatGPT</h3>
+                    <p>Integrates ML and NLP for accurate disease detection.</p>
+                    <a href="https://github.com/Rahul-n12/Enhancing-Disease-Detection-through-Integrating-Patient-Segmentation-and-ChatGPT">View Project</a>
+                </div>
+
             </div>
         </section>
 
@@ -155,11 +226,31 @@
             <div class="experience">
                 <div class="exp-item">
                     <h3>Business Data Analyst | Humana, USA</h3>
-                    <p>Developed Power BI dashboards, SQL pipelines, and financial models.</p>
+                    <p>📍 Jan 2024 – Present</p>
+                    <ul>
+                        <li>Developed and maintained 25+ <b>Power BI dashboards</b> using <b>SQL</b>, <b>Azure Synapse Analytics</b>, and <b>Power BI</b> to monitor KPIs and support strategic decisions.</li>
+                        <li>Conducted <b>ad-hoc financial analyses</b>, ensuring data accuracy and timely execution for key stakeholders.</li>
+                        <li>Designed <b>gap analyses</b> between legacy and modern systems, improving functionality and efficiency by <b>20%</b>.</li>
+                        <li>Utilized <b>Python (Pandas, NumPy, Matplotlib)</b> for data wrangling, statistical analysis, and insight generation.</li>
+                        <li>Managed project documentation: authored 50+ <b>BRDs, FRDs, Use Cases</b>, and maintained <b>100% traceability</b> using <b>MS SharePoint</b>.</li>
+                        <li>Designed, optimized, and secured <b>MS SQL Server</b> databases to maintain compliance and data integrity.</li>
+                        <li>Developed <b>ETL pipelines</b> to process large-scale healthcare data.</li>
+                        <li>Designed and optimized <b>SQL queries</b> for efficient data retrieval.</li>
+                        <li>Collaborated cross-functionally to gather reporting requirements and participated in <b>interoperability initiatives</b>.</li>
+                    </ul>
                 </div>
                 <div class="exp-item">
                     <h3>Business Data Analyst | Mphasis, India</h3>
-                    <p>Designed interactive dashboards & conducted A/B testing.</p>
+                    <p>📍 Aug 2018 – Jul 2022</p>
+                    <ul>
+                        <li>Translated product and business needs into <b>technical specifications</b> to support strategic initiatives.</li>
+                        <li>Created <b>interactive dashboards</b> using <b>Tableau</b> and <b>Power BI</b>, increasing reporting speed and usability by <b>30%</b>.</li>
+                        <li>Wrote advanced <b>SQL</b> queries and Python scripts for data extraction, transformation, and reporting.</li>
+                        <li>Conducted <b>data cleaning</b>, <b>A/B testing</b>, and feature engineering, which improved campaign performance by <b>20%</b>.</li>
+                        <li>Created 30+ <b>visualizations</b> (Heat Maps, Treemaps, Geographic Maps, etc.) to assist with decision-making.</li>
+                        <li>Participated in <b>JAD sessions</b>, authored <b>BRDs</b>, and helped bridge communication between tech and business teams.</li>
+                        <li>Conducted <b>quantitative and financial analysis</b> to identify trends and optimize processes.</li>
+                    </ul>
                 </div>
             </div>
         </section>
