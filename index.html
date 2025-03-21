@@ -4,34 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rahul Nomula - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <style>
         /* Global Styles */
         body {
             font-family: "Poppins", sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            background: linear-gradient(135deg, #1e1e2f, #2a2a3d);
+            color: white;
             margin: 0;
             padding: 0;
-            transition: all 0.3s ease-in-out;
+            text-align: center;
         }
         .container {
-            max-width: 1000px;
+            width: 90%;
+            max-width: 1100px;
             margin: auto;
             padding: 20px;
         }
         /* Header */
         header {
-            background: linear-gradient(135deg, #007acc, #004a99);
+            background: #007acc;
             color: white;
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 22px;
+            padding: 40px;
+            font-size: 24px;
             font-weight: bold;
-            letter-spacing: 1px;
             text-transform: uppercase;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         .toggle-container {
             position: absolute;
@@ -40,19 +38,24 @@
         }
         /* Sections */
         section {
-            background: white;
+            background: rgba(255, 255, 255, 0.1);
             margin: 30px 0;
-            padding: 20px;
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
         }
         section:hover {
             transform: scale(1.02);
         }
         h2 {
-            color: #007acc;
-            text-align: center;
+            color: #ffcc00;
+            font-size: 26px;
+        }
+        /* About Me */
+        .about-text {
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: justify;
         }
         /* Projects */
         .projects {
@@ -61,99 +64,126 @@
             gap: 20px;
         }
         .project-card {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            background: #282c4a;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease-in-out;
             text-align: center;
         }
         .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #ffcc00;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .project-card a:hover {
+            background: #ffaa00;
+        }
+        /* Experience & Education */
+        .experience, .education {
+            text-align: left;
+        }
+        .exp-item, .edu-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
         }
         /* Footer */
         footer {
             background: #007acc;
             color: white;
             text-align: center;
-            padding: 10px;
-        }
-        /* Dark Mode */
-        .dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-        .dark-mode section {
-            background-color: #222;
-            color: white;
-        }
-        .dark-mode .project-card {
-            background-color: #333;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
+
     <header>
         Rahul Nomula - Business Data Analyst & AI Engineer
-        <div class="toggle-container">
-            <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
-        </div>
     </header>
 
     <div class="container">
+
         <!-- About Me -->
         <section>
-            <h2>👋 Welcome to My Portfolio</h2>
-            <p>Hi, I'm <strong>Rahul Nomula</strong>, a passionate <strong>Business Data Analyst & AI/ML Engineer</strong> with expertise in:</p>
-            <ul>
-                <li>📊 <strong>Data Analysis & Business Intelligence</strong> (Power BI, SQL, A/B Testing)</li>
-                <li>📈 <strong>Data Visualization</strong> (Tableau, Power BI, Dashboards)</li>
-                <li>🛠️ <strong>Data Engineering</strong> (SQL, Python, Apache Airflow)</li>
-                <li>🤖 <strong>Machine Learning</strong> (TensorFlow, PyTorch, Scikit-Learn)</li>
-                <li>☁️ <strong>Cloud Computing</strong> (Google Cloud, Azure)</li>
-                <li>🚀 <strong>MLOps & Deployment</strong> (MLflow, FastAPI, Docker)</li>
-            </ul>
+            <h2>👋 About Me</h2>
+            <p class="about-text">
+                Hi, I'm <b>Rahul Nomula</b>, a passionate <b>Business Data Analyst & AI/ML Engineer</b>.  
+                I specialize in <b>data-driven decision making</b>, transforming complex data into actionable insights.  
+                With expertise in <b>Power BI, SQL, Python, and AI technologies</b>, I create scalable solutions for real-world problems.  
+                My goal is to bridge the gap between business needs and data-driven strategies. 🚀  
+            </p>
         </section>
 
-        <!-- Projects -->
+        <!-- Featured Projects -->
         <section>
             <h2>🏆 Featured Projects</h2>
             <div class="projects">
                 <div class="project-card">
-                    <h3>🧠 AI-Powered Debate Simulator</h3>
-                    <p>AI Debate Simulation featuring Steve Jobs vs. Elon Musk.</p>
-                    <a href="https://github.com/Rahul-n12/ai-powered-debate-simulator">🔗 View Project</a>
+                    <h3>🧠 AI Debate Simulator</h3>
+                    <p>Simulates AI-driven debates between famous personalities.</p>
+                    <a href="https://github.com/Rahul-n12/ai-powered-debate-simulator">View Project</a>
                 </div>
                 <div class="project-card">
                     <h3>⚡ ETL Data Transformation</h3>
-                    <p>A scalable ETL pipeline using Apache Airflow.</p>
-                    <a href="https://github.com/Rahul-n12/ETL-Data-Transformation-BMF">🔗 View Project</a>
+                    <p>Automated data transformation using Apache Airflow.</p>
+                    <a href="https://github.com/Rahul-n12/ETL-Data-Transformation-BMF">View Project</a>
                 </div>
                 <div class="project-card">
                     <h3>📷 AI-Powered Image Processing</h3>
-                    <p>Gradio-based image processing with OpenAI models.</p>
-                    <a href="https://github.com/Rahul-n12/ai-powered-image-processing-app">🔗 View Project</a>
+                    <p>Gradio-based AI image editing application.</p>
+                    <a href="https://github.com/Rahul-n12/ai-powered-image-processing-app">View Project</a>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
+        <!-- Experience -->
         <section>
-            <h2>📞 Contact Me</h2>
-            <p>Email: <a href="mailto:rahuln1204@gmail.com">rahuln1204@gmail.com</a></p>
-            <p>🔗 <a href="https://github.com/Rahul-n12">GitHub</a> | <a href="https://linkedin.com/in/rahul-nomula-data">LinkedIn</a></p>
+            <h2>💼 Experience</h2>
+            <div class="experience">
+                <div class="exp-item">
+                    <h3>Business Data Analyst | Humana, USA</h3>
+                    <p>Developed Power BI dashboards, SQL pipelines, and financial models.</p>
+                </div>
+                <div class="exp-item">
+                    <h3>Business Data Analyst | Mphasis, India</h3>
+                    <p>Designed interactive dashboards & conducted A/B testing.</p>
+                </div>
+            </div>
         </section>
+
+        <!-- Education -->
+        <section>
+            <h2>🎓 Education</h2>
+            <div class="education">
+                <div class="edu-item">
+                    <h3>M.S. Data Science | University of North Texas</h3>
+                    <p>2022 – 2024</p>
+                </div>
+                <div class="edu-item">
+                    <h3>B.Tech Electronics & Communications | Mallareddy University</h3>
+                    <p>2014 – 2018</p>
+                </div>
+            </div>
+        </section>
+
     </div>
 
     <footer>
-        © 2025 Rahul Nomula | Hosted on <a href="https://pages.github.com/" style="color:white;">GitHub Pages</a>
+        📧 Email: rahuln1204@gmail.com | 🔗 <a href="https://linkedin.com/in/rahul-nomula-data" style="color:white;">LinkedIn</a>
     </footer>
 
-    <script>
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
-    </script>
 </body>
 </html>
