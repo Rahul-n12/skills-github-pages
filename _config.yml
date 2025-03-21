@@ -1,1 +1,25 @@
-theme: minima
+remote_theme: mmistakes/minimal-mistakes
+title: "Rahul Nomula - Business Data Analyst & AI Engineer"
+description: "Data, AI, and Cloud Enthusiast | Passionate about analytics & automation"
+
+plugins:
+  - jekyll-include-cache
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-archives
+  - jekyll-toc
+  - jekyll-seo-tag
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+theme_settings:
+  skin: default
+  search: true
+  show_excerpts: true
+  author:
+    name: "Rahul Nomula"
+    avatar: "/assets/images/avatar.png"  # Upload an image in /assets/images/
