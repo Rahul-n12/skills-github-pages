@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahul Nomula - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease-in-out;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #007acc, #004a99);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .toggle-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        /* Sections */
+        section {
+            background: white;
+            margin: 30px 0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        section:hover {
+            transform: scale(1.02);
+        }
+        h2 {
+            color: #007acc;
+            text-align: center;
+        }
+        /* Projects */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+        /* Footer */
+        footer {
+            background: #007acc;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: white;
+        }
+        .dark-mode section {
+            background-color: #222;
+            color: white;
+        }
+        .dark-mode .project-card {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Rahul Nomula - Business Data Analyst & AI Engineer
+        <div class="toggle-container">
+            <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- About Me -->
+        <section>
+            <h2>👋 Welcome to My Portfolio</h2>
+            <p>Hi, I'm <strong>Rahul Nomula</strong>, a passionate <strong>Business Data Analyst & AI/ML Engineer</strong> with expertise in:</p>
+            <ul>
+                <li>📊 <strong>Data Analysis & Business Intelligence</strong> (Power BI, SQL, A/B Testing)</li>
+                <li>📈 <strong>Data Visualization</strong> (Tableau, Power BI, Dashboards)</li>
+                <li>🛠️ <strong>Data Engineering</strong> (SQL, Python, Apache Airflow)</li>
+                <li>🤖 <strong>Machine Learning</strong> (TensorFlow, PyTorch, Scikit-Learn)</li>
+                <li>☁️ <strong>Cloud Computing</strong> (Google Cloud, Azure)</li>
+                <li>🚀 <strong>MLOps & Deployment</strong> (MLflow, FastAPI, Docker)</li>
+            </ul>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2>🏆 Featured Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>🧠 AI-Powered Debate Simulator</h3>
+                    <p>AI Debate Simulation featuring Steve Jobs vs. Elon Musk.</p>
+                    <a href="https://github.com/Rahul-n12/ai-powered-debate-simulator">🔗 View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>⚡ ETL Data Transformation</h3>
+                    <p>A scalable ETL pipeline using Apache Airflow.</p>
+                    <a href="https://github.com/Rahul-n12/ETL-Data-Transformation-BMF">🔗 View Project</a>
+                </div>
+                <div class="project-card">
+                    <h3>📷 AI-Powered Image Processing</h3>
+                    <p>Gradio-based image processing with OpenAI models.</p>
+                    <a href="https://github.com/Rahul-n12/ai-powered-image-processing-app">🔗 View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <h2>📞 Contact Me</h2>
+            <p>Email: <a href="mailto:rahuln1204@gmail.com">rahuln1204@gmail.com</a></p>
+            <p>🔗 <a href="https://github.com/Rahul-n12">GitHub</a> | <a href="https://linkedin.com/in/rahul-nomula-data">LinkedIn</a></p>
+        </section>
+    </div>
+
+    <footer>
+        © 2025 Rahul Nomula | Hosted on <a href="https://pages.github.com/" style="color:white;">GitHub Pages</a>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
